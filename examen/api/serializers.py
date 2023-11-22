@@ -22,6 +22,7 @@ class CategorieSerializer (SerializadorPadre):
       fields = '__all__'
 
 class ProductSerializer (SerializadorPadre):
+   #categoryid = CategorieSerializer(many=False, required=False)
    class Meta:
       model = Products
       fields = '__all__'
@@ -38,8 +39,14 @@ class OrderSerializer(SerializadorPadre):
       model = Orders
       fields = '__all__'
 
+#class EmployeenestedSerializer (SerializadorPadre):
+#   class Meta:
+#      model = Employees
+#      fields = '__all__'
+
 class EmployeeSerializer (SerializadorPadre):
-   class Meta:
+#    reportsto = EmployeenestedSerializer(many=False, required=False)
+    class Meta:
       model = Employees
       fields = '__all__'
 
