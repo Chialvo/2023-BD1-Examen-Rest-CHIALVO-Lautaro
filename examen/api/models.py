@@ -138,9 +138,12 @@ class Products(models.Model):
     reorderlevel = models.SmallIntegerField(db_column='ReorderLevel', blank=True, null=True)  # Field name made lowercase.
     discontinued = models.TextField(db_column='Discontinued')  # Field name made lowercase. This field type is a guess.
 
+    def suma(self):
+        return (self.unitsinstock+self.unitsonorder)
     class Meta:
         managed = False
         db_table = 'Products'
+
 
 
 class Region(models.Model):

@@ -25,5 +25,10 @@ urlpatterns = [
 
     path("employeedetail/<str:lastname>/", employees_by_lastname, name="getAllEmployeeDetails"),
     
-    path("filtro1/", filtrar_por_birthday, name="getFiltro1"),
+    path("filtro1/", filtro1, name="getFiltro1"),
+    path("filtro3/", filtro3, name="getFiltro3"),
+    path("filtro4/", filtro4, name="getFiltro4"),
+
+    path("punto1/", punto1),
+    path("punto2/", punto2),
 ]

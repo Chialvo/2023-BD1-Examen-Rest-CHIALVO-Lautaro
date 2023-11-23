@@ -51,9 +51,17 @@ class EmployeeSerializer (SerializadorPadre):
       fields = '__all__'
 
 
-#class Punto1Serializer(serializers.Serializer):
-#    id = serializers.IntegerField()
-#    apellido = serializers.CharField(max_length=50)
-#    descripcion = CondicionIvaSerializer(many=False)
-#    telefono = serializers.IntegerField()
-#    nuevoTelefono = serializers.IntegerField()
+class Filtro4Serializer(serializers.Serializer):
+   id = serializers.IntegerField()
+   apellido = serializers.CharField()
+   nombre = serializers.CharField()
+   birthdate = serializers.DateTimeField()
+   country = serializers.CharField()
+   newCountry = serializers.CharField()
+
+class Punto1Serializer(serializers.Serializer):
+   productid : serializers.IntegerField()
+   productname : serializers.CharField()
+   supplierid : serializers.IntegerField()
+   categoryid : serializers.IntegerField()
+   stockmin : serializers.IntegerField()
